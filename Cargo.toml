@@ -1,0 +1,10 @@
+[package]
+name = "rust-ctgrind"
+version = "0.0.0"
+authors = ["Michael Gehring <mg@ebfe.org>"]
+
+[lib]
+name = "ctgrind"
+
+[dependencies.vgrs]
+git = "https://github.com/kmcallister/vgrs"
