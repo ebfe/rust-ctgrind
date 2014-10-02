@@ -1,3 +1,6 @@
+#![crate_name = "ctgrind"]
+#![crate_type = "lib"]
+
 extern crate vgrs;
 
 use vgrs::memcheck::{make_mem_undefined, make_mem_defined};
