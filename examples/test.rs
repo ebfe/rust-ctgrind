@@ -23,8 +23,8 @@ fn bad_memory_access(a: &[u8]) -> u8 {
 }
 
 pub fn main() {
-    let a : [u8, ..16] = [0, ..16];
-    let b : [u8, ..16] = [0, ..16];
+    let a : [u8; 16] = [0; 16];
+    let b : [u8; 16] = [0; 16];
 
     ctgrind::poison(a.as_slice().as_ptr() as *const (), a.len());
     println!("check16_bad");
