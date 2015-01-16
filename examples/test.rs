@@ -19,7 +19,7 @@ fn check16_good(a: &[u8], b: &[u8]) -> bool {
 
 fn bad_memory_access(a: &[u8]) -> u8 {
     let r = [1u8, 0];
-    r[(a[0] & 1) as uint]
+    r[(a[0] & 1) as usize]
 }
 
 pub fn main() {
