@@ -1,3 +1,5 @@
+#![feature(core)]
+
 extern crate ctgrind;
 
 fn check16_bad(a: &[u8], b: &[u8]) -> bool {
