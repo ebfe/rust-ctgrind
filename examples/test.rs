@@ -28,11 +28,11 @@ pub fn main() {
     let a : [u8; 16] = [0; 16];
     let b : [u8; 16] = [0; 16];
 
-    ctgrind::poison(a.as_slice().as_ptr() as *const (), a.len());
+    ctgrind::poison(a.as_ref().as_ptr() as *const (), a.len());
     println!("check16_bad");
-    check16_bad(a.as_slice(), b.as_slice());
+    check16_bad(a.as_ref(), b.as_ref());
     println!("check16_good");
-    check16_good(a.as_slice(), b.as_slice());
+    check16_good(a.as_ref(), b.as_ref());
     println!("bad_memory_access");
-    bad_memory_access(a.as_slice());
+    bad_memory_access(a.as_ref());
 }
