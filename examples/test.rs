@@ -3,7 +3,7 @@
 extern crate ctgrind;
 
 fn check16_bad(a: &[u8], b: &[u8]) -> bool {
-    for i in range(0, a.len()) {
+    for i in 0..a.len() {
         if a[i] != b[i] {
             return false;
         }
@@ -13,7 +13,7 @@ fn check16_bad(a: &[u8], b: &[u8]) -> bool {
 
 fn check16_good(a: &[u8], b: &[u8]) -> bool {
     let mut r = 0u8;
-    for i in range(0, a.len()) {
+    for i in 0..a.len() {
         r |= a[i] ^ b[i];
     }
     return r == 0;
